@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes&Colours</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .control-panel {
+            margin-bottom: 20px;
+        }
+        .control-panel button {
+            margin: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .control-panel input[type="text"] {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        .shape-container {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .shape {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ccc;
+        }
+        .square {
+            width: 150px;
+            height: 150px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shape Editor</h1>
+
+    <div class="shape-container" id="shapeContainer"></div>
+
+    <div class="control-panel">
+        <button onclick="setShape('circle')">Круг</button>
+        <button onclick="setShape('square')">Квадрат</button>
+
+        <div>
+            <button style="background-color:#6d3b07 ;color:mocha;" onclick="setColor('#6d3b07')">Коричневый</button>
+            <button style="background-color: #550000;color:marron;" onclick="setColor('#550000')">Тёмно-бордовый</button>
+            <button style=  "background-color: #adebb3;color:mintgreen;" onclick="setColor('#adebb3')">Мятно-зеленый</button>
+            <button style=  "background-color: #d3d3ff;color:lavender;" onclick="setColor('#d3d3ff')">Лавандовый</button>
+        </div>
+
+        <div>
+            <input type="text" id="textInput" placeholder="Введите текст" />
+            <button onclick="addText()">Добавить текст</button>
+        </div>
+
+        <button onclick="clearShape()">Очистить</button>
+    </div>
+
+<script src="./script.js"></script>
+
+
+    
+</body>
+</html>
+
